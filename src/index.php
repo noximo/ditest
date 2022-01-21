@@ -10,10 +10,12 @@ $cb = new ContainerBuilder();
 $loader = new PhpFileLoader($cb, new FileLocator('../config'));
 $loader->load('services.php');
 
-$id = 'App\\Test';
+$id = Test::class;
 
 echo $cb->has($id) ? 'Y' : 'N';
 echo PHP_EOL;
+
+dump($cb);
 
 $c = $cb->get($id);
 

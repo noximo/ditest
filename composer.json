@@ -16,5 +16,8 @@
     "platform": {
       "php": "7.3.31"
     }
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^5.4"
   }
 }

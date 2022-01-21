@@ -1,0 +1,255 @@
+Symfony\Component\DependencyInjection\ContainerBuilder {#3
+  -extensions: []
+  -extensionsByNs: []
+  -definitions: array:4 [
+    "service_container" => Symfony\Component\DependencyInjection\Definition {#4
+      -class: "Symfony\Component\DependencyInjection\ContainerInterface"
+      -file: null
+      -factory: null
+      -shared: true
+      -deprecation: []
+      -properties: []
+      -calls: []
+      -instanceof: []
+      -autoconfigured: false
+      -configurator: null
+      -tags: []
+      -public: true
+      -synthetic: true
+      -abstract: false
+      -lazy: false
+      -decoratedService: null
+      -autowired: false
+      -changes: array:2 [
+        "class" => true
+        "public" => true
+      ]
+      -bindings: []
+      -errors: []
+      #arguments: []
+      +innerServiceId: null
+      +decorationOnInvalid: null
+    }
+    "App\OtherClass" => Symfony\Component\DependencyInjection\Definition {#41
+      -class: null
+      -file: null
+      -factory: null
+      -shared: true
+      -deprecation: []
+      -properties: []
+      -calls: []
+      -instanceof: []
+      -autoconfigured: true
+      -configurator: null
+      -tags: []
+      -public: false
+      -synthetic: false
+      -abstract: false
+      -lazy: false
+      -decoratedService: null
+      -autowired: true
+      -changes: []
+      -bindings: []
+      -errors: []
+      #arguments: []
+      +innerServiceId: null
+      +decorationOnInvalid: null
+    }
+    "App\Test" => Symfony\Component\DependencyInjection\Definition {#62
+      -class: null
+      -file: null
+      -factory: null
+      -shared: true
+      -deprecation: []
+      -properties: []
+      -calls: []
+      -instanceof: []
+      -autoconfigured: true
+      -configurator: null
+      -tags: []
+      -public: false
+      -synthetic: false
+      -abstract: false
+      -lazy: false
+      -decoratedService: null
+      -autowired: true
+      -changes: []
+      -bindings: []
+      -errors: []
+      #arguments: []
+      +innerServiceId: null
+      +decorationOnInvalid: null
+    }
+    "App\index" => Symfony\Component\DependencyInjection\Definition {#42
+      -class: null
+      -file: null
+      -factory: null
+      -shared: true
+      -deprecation: []
+      -properties: []
+      -calls: []
+      -instanceof: []
+      -autoconfigured: true
+      -configurator: null
+      -tags: []
+      -public: false
+      -synthetic: false
+      -abstract: false
+      -lazy: false
+      -decoratedService: null
+      -autowired: true
+      -changes: []
+      -bindings: []
+      -errors: array:1 [
+        0 => "Expected to find class "App\index" in file "C:\wamp64\www\ditest\src/index.php" while importing services from resource "../src/*", but it was not found! Check the namespace prefix used with the resource."
+      ]
+      #arguments: []
+      +innerServiceId: null
+      +decorationOnInvalid: null
+    }
+  ]
+  -aliasDefinitions: array:2 [
+    "Psr\Container\ContainerInterface" => Symfony\Component\DependencyInjection\Alias {#5
+      -id: "service_container"
+      -public: false
+      -deprecation: array:3 [
+        "package" => "symfony/dependency-injection"
+        "version" => "5.1"
+        "message" => "The "%alias_id%" autowiring alias is deprecated. Define it explicitly in your app if you want to keep using it."
+      ]
+    }
+    "Symfony\Component\DependencyInjection\ContainerInterface" => Symfony\Component\DependencyInjection\Alias {#6
+      -id: "service_container"
+      -public: false
+      -deprecation: array:3 [
+        "package" => "symfony/dependency-injection"
+        "version" => "5.1"
+        "message" => "The "%alias_id%" autowiring alias is deprecated. Define it explicitly in your app if you want to keep using it."
+      ]
+    }
+  ]
+  -resources: array:4 [
+    "C:\wamp64\www\ditest\config\services.php" => Symfony\Component\Config\Resource\FileResource {#9
+      -resource: "C:\wamp64\www\ditest\config\services.php"
+    }
+    "reflection.App\OtherClass" => Symfony\Component\Config\Resource\ReflectionClassResource {#29
+      -files: []
+      -className: "App\OtherClass"
+      -classReflector: ReflectionClass {#28
+        +name: "App\OtherClass"
+        modifiers: "final"
+        implements: []
+        constants: []
+        methods: array:1 [
+          "go" => ReflectionMethod {#40
+            +name: "go"
+            +class: "App\OtherClass"
+            returnType: "void"
+            modifiers: "public"
+          }
+        ]
+      }
+      -excludedVendors: array:1 [
+        0 => "C:\wamp64\www\ditest\vendor"
+      ]
+      -hash: null
+    }
+    "reflection.App\Test" => Symfony\Component\Config\Resource\ReflectionClassResource {#31
+      -files: []
+      -className: "App\Test"
+      -classReflector: ReflectionClass {#30
+        +name: "App\Test"
+        modifiers: "final"
+        implements: []
+        constants: []
+        properties: array:1 [
+          "otherClass" => ReflectionProperty {#38
+            +name: "otherClass"
+            +class: "App\Test"
+            modifiers: "private"
+            extra: {
+              docComment: """
+                /**\n
+                     * @var OtherClass\n
+                     */
+                """
+            }
+          }
+        ]
+        methods: array:2 [
+          "__construct" => ReflectionMethod {#50
+            +name: "__construct"
+            +class: "App\Test"
+            parameters: {
+              $otherClass: ReflectionParameter {#45
+                +name: "otherClass"
+                position: 0
+                typeHint: "App\OtherClass"
+              }
+            }
+            modifiers: "public"
+          }
+          "go" => ReflectionMethod {#26
+            +name: "go"
+            +class: "App\Test"
+            returnType: "void"
+            modifiers: "public"
+          }
+        ]
+      }
+      -excludedVendors: array:1 [
+        0 => "C:\wamp64\www\ditest\vendor"
+      ]
+      -hash: null
+    }
+    "glob.C:\wamp64\www\ditest\src1/*0" => Symfony\Component\Config\Resource\GlobResource {#25
+      -prefix: "C:\wamp64\www\ditest\src"
+      -pattern: "/*"
+      -recursive: true
+      -hash: null
+      -forExclusion: false
+      -excludedPrefixes: []
+      -globBrace: 128
+    }
+  ]
+  -extensionConfigs: []
+  -compiler: null
+  -trackResources: true
+  -proxyInstantiator: null
+  -expressionLanguage: null
+  -expressionLanguageProviders: []
+  -usedTags: []
+  -envPlaceholders: []
+  -envCounters: []
+  -vendors: array:1 [
+    0 => "C:\wamp64\www\ditest\vendor"
+  ]
+  -autoconfiguredInstanceof: []
+  -autoconfiguredAttributes: []
+  -removedIds: []
+  -removedBindingIds: []
+  -classReflectors: array:2 [
+    "App\OtherClass" => ReflectionClass {#28}
+    "App\Test" => ReflectionClass {#30}
+  ]
+  #parameterBag: Symfony\Component\DependencyInjection\ParameterBag\EnvPlaceholderParameterBag {#2
+    -envPlaceholderUniquePrefix: null
+    -envPlaceholders: []
+    -unusedEnvPlaceholders: []
+    -providedTypes: []
+    #parameters: []
+    #resolved: false
+  }
+  #services: []
+  #privates: []
+  #fileMap: []
+  #methodMap: []
+  #factories: []
+  #aliases: []
+  #loading: []
+  #resolving: []
+  #syntheticIds: []
+  -envCache: []
+  -compiled: false
+  -getEnv: null
+}
